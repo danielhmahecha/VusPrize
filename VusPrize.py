@@ -9,7 +9,7 @@ from joblib import dump, load
 
 def main(argv):
     if (argv[0] == '-h'):
-        print ('Usage: app.py <inputfile> <outputfile>')
+        print ('Usage: VusPrize.py <inputfile> <outputfile>')
     else:
         
         vepFile = ''
@@ -77,13 +77,12 @@ def completeColumns (df):
 def variantPredictions(df,ids):
     clf_RF = load('RF_niu.joblib') 
     predicciones = clf_RF.predict(df)
-    pd.DataFrame(predicciones).to_csv("predicciones_haplo.csv")
     preds = pd.DataFrame(predicciones, columns=['Prediction'])
     probabilities = clf_RF.predict_proba(df)
-    probs = pd.DataFrame(probabilities[:,1], columns = ['Probability'])
+    probs = pd.DataFrame(probabilities[:,1], columns = ['Probability of Pathogenicity'])
     result = pd.concat([ids, preds, probs], axis=1)
     result = result.replace({'Prediction':1}, 'Pathogenic')
-    result = result.replace({'Prediction':0}, 'Benign')
+    result = result.replace({'Prediction':0}, 'No Pathogenic')
     return result
 
 if __name__=="__main__":
