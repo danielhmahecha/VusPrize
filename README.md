@@ -43,3 +43,28 @@ the VusPrize.py file.
 USAGE:
 
 python VusPrize.py <input_file> <output_file>
+
+
+--------------------
+VCF Benchmark Files
+--------------------
+
+The following files are included in the VCF_Files folder:
+
+clinvar_VUS.vcf.gz  Variants classified as VUS in ClinVar on August 08th 2020
+clinvar_exVUS_pathogenic.vcf.gz Variants that were VUS but had been reclassified as Pathogenic with at least two gold stars in ClinVar on August 08th 2020
+clinvar_exVUS_benign.vcf.gz Variants that were VUS but had been reclassified as Pathogenic with at least two gold stars in ClinVar on August 08th 2020
+clinvar_pathogenic.vcf.gz Variants classified as Pathogenic in ClinVar on August 08th 2020
+clinvar_benign.vcf.gz Variants classified as Benign in ClinVar on August 08th 2020
+
+--------------------
+VEP Annotated Benchmark Files
+--------------------
+
+The following CVS files (included in the Training folder) are the Ensembl-VEP annotated versions of the VCF files and were used to train and test the model(s): 
+
+EXVUS_BEN_2020.txt  VEP annotated variants formerly classified as VUS but reclassified as Benign in ClinVar on August 08th 2020 in CSV format
+EXVUS_PAT_2020.txt VEP annotated variants formerly classified as VUS but reclassified as Pathogenic in ClinVar on August 08th 2020 in CSV format
+BEN_2020.txt  VEP annotated variants classified as Benign in ClinVar on August 08th 2020 in CSV format
+PAT_2020.txt  VEP annotated variants classified as Pathogenic in ClinVar on August 08th 2020 in CSV format
+VUS_2020.txt  VEP annotated variants classified as VUS in ClinVar on August 08th 2020 in CSV format
