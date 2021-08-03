@@ -42,8 +42,16 @@ USAGE:
 
 python VusPrize.py <input_file> <output_file>
 
+--------------------
+VCF Benchmark Files
+--------------------
 
+The following VCF files were used to train and test the model: 
 
-
+clinvar_VUS.vcf.gz  Variants classified as VUS in ClinVar on August 08th 2020
+clinvar_exVUS_pathogenic.vcf.gz Variants that were VUS but had been reclassified as Pathogenic with at least two gold stars in ClinVar on August 08th 2020
+clinvar_exVUS_benign.vcf.gz Variants that were VUS but had been reclassified as Pathogenic with at least two gold stars in ClinVar on August 08th 2020
+clinvar_pathogenic.vcf.gz Variants classified as Pathogenic in ClinVar on August 08th 2020
+clinvar_benign.vcf.gz Variants classified as Benign in ClinVar on August 08th 2020
 
 
