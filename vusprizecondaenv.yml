@@ -1,0 +1,30 @@
+# Conda environment for VusPrize
+s
+name: vusprize
+channels:
+
+- conda-forge
+- defaults
+dependencies:
+
+# core python dependencies
+- conda-forge::python        
+- pip
+- conda-forge::numpy          
+- conda-forge::theano 
+- defaults::tensorflow=2.2      # update only if absolutely necessary, as this may cause conflicts with other core dependencies
+                                    #   verify that this is using numpy compiled against MKL (e.g., by checking tensorflow.pywrap_tensorflow.IsMklEnabled())
+- conda-forge::scipy          
+- conda-forge::h5py             # required by keras
+- conda-forge::keras=2.3.0        
+- defaults::intel-openmp
+- conda-forge::scikit-learn
+- conda-forge::matplotlib
+- conda-forge::pandas
+- conda-forge::joblib
+- conda-forge::jupyter
+- pip:
+  - tensorflow==2.2
+
+  
+
