@@ -1,6 +1,13 @@
 VusPrize - Variants of Uncertain Significance Prioritization Random Forest
-Version 0.0.1 (22-11-2020)
+Version 1.0.1 (22-08-2021)
 ===========================================================================
+
+
+This folder contains a jupyter notebook that allows to reproduce the model training process, including the Random Forest model used in the VusPrize.py tool and two additional approaches:
+A Support Vector Machine based model and a Five-Layers Perceptron.
+
+It is advised to run the jupyter notebook in the vusprize conda environment that can be set up using the vusprizecondaenv.yml file provided in the main folder. 
+
 
 VusPrize provides a random forest model to prioritize variants of uncertain
 significance as Pathogenic or Not Pathogenic. VusPrize performs an accurate
@@ -31,45 +38,6 @@ from 0 to 1, obtained by the proportion of random forest. The predicted class pr
 the Pathogenic class of the trees in the forest. The class probability of a 
 single tree is the fraction of samples of the same class in a leaf.
 
---------------------
-Running VusPrize
---------------------
-
-VusPrize is available as an application on Python 3.7.5 To run it 
-succesfully,it is required to have the following libraries installed:
-Pandas 0.25.3
-Sklearn 0.21.3
-Joblib 0.14.0
-
-It is advised to run the python application and the jupyter notebooks of the tool training in a dedicated conda environment.
-You can create a dedicated environment from the vusprizecondaenv.yml file.
-Go to the directory where you have stored the vusprizecondaenv.yml file. 
-Run: conda env create -n vusprize -f vusprizecondaenv.yml
-Then: conda activate vusprize
-
-
-The RF_niu.joblib file is provided and must be located in the same directory as 
-the VusPrize.py file.
-
-USAGE:
-
-python VusPrize.py <input_file> <output_file>
-
---------------------
-VCF Benchmark Files
---------------------
-
-The following files are included in the VCF_Files folder:
-
-clinvar_VUS.vcf.gz  Variants classified as VUS in ClinVar on August 08th 2020
-clinvar_exVUS_pathogenic.vcf.gz Variants that were VUS but had been reclassified as Pathogenic with at least two gold stars in ClinVar on August 08th 2020
-clinvar_exVUS_benign.vcf.gz Variants that were VUS but had been reclassified as Pathogenic with at least two gold stars in ClinVar on August 08th 2020
-clinvar_pathogenic.vcf.gz Variants classified as Pathogenic in ClinVar on August 08th 2020
-clinvar_benign.vcf.gz Variants classified as Benign in ClinVar on August 08th 2020
-
---------------------
-VEP Annotated Benchmark Files
---------------------
 
 The following CVS files (included in the Training folder) are the Ensembl-VEP annotated versions of the VCF files and were used to train and test the model(s): 
 
@@ -78,5 +46,7 @@ EXVUS_PAT_2020.txt VEP annotated variants formerly classified as VUS but reclass
 BEN_2020.txt  VEP annotated variants classified as Benign in ClinVar on August 08th 2020 in CSV format
 PAT_2020.txt  VEP annotated variants classified as Pathogenic in ClinVar on August 08th 2020 in CSV format
 VUS_2020.txt  VEP annotated variants classified as VUS in ClinVar on August 08th 2020 in CSV format
+
+This files are the basis of model training.
 
 
