@@ -1,0 +1,7 @@
+name: minivusprize
+
+dependencies:
+  - python=3.6.0 
+  - pandas
+  - scikit-learn
+  - joblib
