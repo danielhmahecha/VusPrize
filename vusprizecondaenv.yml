@@ -1,5 +1,5 @@
 # Conda environment for VusPrize
-s
+
 name: vusprize
 channels:
 
