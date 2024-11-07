@@ -29,6 +29,7 @@ This file can be generated in the VEP command line tool using the following comm
 The output of the VusPrize tool is a tab separated csv file with the following 
 columns: 'Location', 'Allele', 'SYMBOL', 'Consequence', 'Prediction', 
 'Probability of Pathogenicity'.
+
 The Probability column states the Probability of Pathogenicity of the variant
 from 0 to 1, obtained by the proportion of random forest. The predicted class probabilities of a variant are computed as the mean predicted probabilities of 
 the Pathogenic class of the trees in the forest. The class probability of a 
@@ -38,7 +39,8 @@ single tree is the fraction of samples of the same class in a leaf.
 Running VusPrize
 --------------------
 
-The oython application was developed using Anaconda full distribution on a Ubuntu 18.04 machine. 
+The python application was developed using Anaconda full distribution on a Ubuntu 18.04 machine. 
+
 It is advised to run the python application and the available jupyter notebook in the minivusprize conda environment.
 You can create this dedicated environment from the minivusprize.yml file.
 
@@ -64,9 +66,13 @@ VCF Benchmark Files
 The following files are included in the VCF_Files folder:
 
 clinvar_VUS.vcf.gz  Variants classified as VUS in ClinVar on August 08th 2020
+
 clinvar_exVUS_pathogenic.vcf.gz Variants that were VUS but had been reclassified as Pathogenic with at least two gold stars in ClinVar on August 08th 2020
+
 clinvar_exVUS_benign.vcf.gz Variants that were VUS but had been reclassified as Pathogenic with at least two gold stars in ClinVar on August 08th 2020
+
 clinvar_pathogenic.vcf.gz Variants classified as Pathogenic in ClinVar on August 08th 2020
+
 clinvar_benign.vcf.gz Variants classified as Benign in ClinVar on August 08th 2020
 
 --------------------
@@ -76,9 +82,13 @@ VEP Annotated Benchmark Files
 The following CVS files (included in the Training folder) are the Ensembl-VEP annotated versions of the VCF files and were used to train and test the model(s): 
 
 EXVUS_BEN_2020.txt  VEP annotated variants formerly classified as VUS but reclassified as Benign in ClinVar on August 08th 2020 in CSV format
+
 EXVUS_PAT_2020.txt VEP annotated variants formerly classified as VUS but reclassified as Pathogenic in ClinVar on August 08th 2020 in CSV format
+
 BEN_2020.txt  VEP annotated variants classified as Benign in ClinVar on August 08th 2020 in CSV format
+
 PAT_2020.txt  VEP annotated variants classified as Pathogenic in ClinVar on August 08th 2020 in CSV format
+
 VUS_2020.txt  VEP annotated variants classified as VUS in ClinVar on August 08th 2020 in CSV format
 
 
