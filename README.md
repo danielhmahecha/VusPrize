@@ -7,8 +7,8 @@ significance as Pathogenic or Not Pathogenic. VusPrize performs an accurate
 prediction of the probability of pathogenicity of a variant for variant 
 interpretation pipelines for research purposes. 
 
-Cite as: Daniel Mahecha, Haydemar Nuñez, Maria Lattig, et al. Machine Learning Models for Accurate Prioritization of Variants of Uncertain Significance. Authorea. November 25, 2020.
-DOI: 10.22541/au.160629133.32270917/v1
+Cite as: Mahecha D, Nuñez H, Lattig MC, Duitama J. Machine learning models for accurate prioritization of variants of uncertain significance. Hum Mutat. 2022 Apr;43(4):449-460.
+DOI: 10.1002/humu.24339.
 
 Before using VusPrize, you need to process your vcf variants file on the
 Ensembl Variant Effect Predictor (VEP) and dowload the results file as a csv
@@ -38,11 +38,16 @@ single tree is the fraction of samples of the same class in a leaf.
 Running VusPrize
 --------------------
 
-It is advised to run the python application and the available jupyter notebook in the vusprize conda environment.
-You can create this dedicated environment from the vusprizecondaenv.yml file.
-Go to the directory where you have stored the vusprizecondaenv.yml file. 
-Run: conda env create -n vusprize -f vusprizecondaenv.yml
-Then: conda activate vusprize
+The oython application was developed using Anaconda full distribution on a Ubuntu 18.04 machine. 
+It is advised to run the python application and the available jupyter notebook in the minivusprize conda environment.
+You can create this dedicated environment from the minivusprize.yml file.
+
+Go to the directory where you have stored the minivusprize.yml file. 
+
+Run: 
+conda env create -n vusprize -f minivusprize.yml
+
+conda activate vusprize
 
 
 The RF_niu.joblib file is provided and must be located in the same directory as 
