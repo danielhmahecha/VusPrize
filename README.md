@@ -26,7 +26,7 @@ This file can be generated in the VEP command line tool using the following comm
 ./vep --af --appris --buffer_size 500 --check_existing --distance 5000 --mane --pick --plugin MaxEntScan,[path_to]/maxentscan --plugin Blosum62 --plugin dbNSFP,[path_to]/dbNSFP4.1a_grch37.gz,codon_degeneracy,Eigen-phred_coding,integrated_fitCons_score,GERP++_RS,phyloP100way_vertebrate --plugin dbscSNV,[path_to]/dbscSNV1.1_GRCh37.txt.gz --plugin LoFtool,[path_to]/LoFtool_scores.txt --plugin CADD,[path_to]/CADD_GRCh37_1.6_whole_genome_SNVs.tsv.gz,[path_to]/CADD_GRCh37_1.6_InDels.tsv.gz --refseq --regulatory --sift p --species homo_sapiens --symbol --transcript_version --tsl --cache --input_file [input_data] --output_file [output_file] --port 3337
 
 
-The output of the VusPrize tool is a tab separated csv file with the following 
+The output of the VusPrize tool is a tab separated tsv file with the following 
 columns: 'Location', 'Allele', 'SYMBOL', 'Consequence', 'Prediction', 
 'Probability of Pathogenicity'.
 
@@ -79,7 +79,7 @@ clinvar_benign.vcf.gz Variants classified as Benign in ClinVar on August 08th 20
 VEP Annotated Benchmark Files
 --------------------
 
-The following CVS files (included in the Training folder) are the Ensembl-VEP annotated versions of the VCF files and were used to train and test the model(s): 
+The following TSV files (included in the Training folder) are the Ensembl-VEP annotated versions of the VCF files and were used to train and test the model(s): 
 
 EXVUS_BEN_2020.txt  VEP annotated variants formerly classified as VUS but reclassified as Benign in ClinVar on August 08th 2020 in CSV format
 
