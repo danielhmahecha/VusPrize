@@ -4,7 +4,7 @@
 ## ¿Te interesa participar en un tutorial sobre el uso de esta herramienta? Completa el siguiente formulario:
 ## https://forms.office.com/r/WrjiHEz1Ji
 
-Estamos optimizando detalles técnicos relacionados con el uso de nuestra herramienta y muy pronto publicaremos una versión reentrenada de nuestra herramienta. Mientras tanto, te invitamos a utilizar la versión original y a consultar nuestra publicación:
+Estamos optimizando detalles técnicos y muy pronto publicaremos una versión reentrenada de nuestra herramienta. Mientras tanto, te invitamos a utilizar la versión original y a consultar nuestra publicación:
 
 _Mahecha, D., Nuñez, H., Lattig, M. C., & Duitama, J. (2022). Machine learning models for accurate prioritization of variants of uncertain significance. Human Mutation, 43(4), 449–460. https://doi.org/10.1002/humu.24339_
 
